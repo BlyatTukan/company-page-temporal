@@ -216,46 +216,22 @@
             <h2 class="title">Portfolio</h2>    
             <div class="portfolio-content">
                 <div class="portfolio-box">
-                    <div class="overlay-text">
-                        <h1>Writting</h1>
-                        <p>Client Project</p>	
-                    </div>
-                    <img src="images/profile-2.jpeg">           
+                    <img src="images/profile-1.jpeg">          
                 </div>
                 <div class="portfolio-box">
-                    <div class="overlay-text">
-                        <h1>Writting</h1>
-                        <p>Client Project</p>	
-                    </div>
-                    <img src="images/profile-2.jpeg">           
+                    <img src="images/profile-2.jpeg">          
                 </div>
                 <div class="portfolio-box">
-                    <div class="overlay-text">
-                        <h1>Writting</h1>
-                        <p>Client Project</p>	
-                    </div>
-                    <img src="images/profile-2.jpeg">           
+                    <img src="images/profile-3.jpeg">          
                 </div>
                 <div class="portfolio-box">
-                    <div class="overlay-text">
-                        <h1>Writting</h1>
-                        <p>Client Project</p>	
-                    </div>
-                    <img src="images/profile-2.jpeg">           
+                    <img src="images/profile-4.jpeg">          
                 </div>
                 <div class="portfolio-box">
-                    <div class="overlay-text">
-                        <h1>Writting</h1>
-                        <p>Client Project</p>	
-                    </div>
-                    <img src="images/profile-2.jpeg">           
+                    <img src="images/profile-5.jpeg">          
                 </div>
                 <div class="portfolio-box">
-                    <div class="overlay-text">
-                        <h1>Writting</h1>
-                        <p>Client Project</p>	
-                    </div>
-                    <img src="images/profile-2.jpeg">           
+                    <img src="images/banner.jpg">          
                 </div>
             </div>
         </div>
@@ -325,5 +301,22 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        const buttons = document.querySelectorAll("a");
+        buttons.forEach((button) => {
+          button.onclick = function(e){
+            let x = e.clientX - e.target.offsetLeft;
+            let y = e.clientY - e.target.offsetTop;
+            let ripple = document.createElement("span");
+            ripple.style.left = `${x}px`;
+            ripple.style.top = `${y}px`;
+            this.appendChild(ripple);
+            setTimeout(function(){
+              ripple.remove();
+            }, 600); // 1second = 1000ms
+          }
+        });
+    
+        </script>
 </body>
 </html>
