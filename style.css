@@ -35,12 +35,13 @@ section{
     padding: 0 80px;
     margin: auto;
 }
-.about, .services, .skills, .teams, .contact, footer{
+.about, .services, .skills, .teams, .portfolio, .contact, footer{
     font-family: 'Poppins', sans-serif;
 }
 .about .about-content, 
 .services .serv-content,
 .skills .skills-content,
+.portfolio .portfolio-content,
 .contact .contact-content{
     display: flex;
     flex-wrap: wrap;
@@ -90,7 +91,9 @@ section .title::after{
 }
 .navbar.sticky{
     padding: 15px 0;
-    background: crimson;
+    background-color: #045de9;
+    background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
+    box-shadow: 4px 4px 20px #000000;
 }
 .navbar .max-width{
     display: flex;
@@ -139,7 +142,9 @@ section .title::after{
     position: fixed;
     height: 45px;
     width: 42px;
-    background: crimson;
+    background-color: #045de9;
+    background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
+    box-shadow: 1px 1px 10px #000000;
     right: 30px;
     bottom: 10px;
     text-align: center;
@@ -287,7 +292,8 @@ section .title::after{
     content: "Long Text Test";
 }
 .services .serv-content .card{
-    width: calc(33% - 20px);
+    width: calc(33% - 10px);
+    height: 200px;
     background: #222;
     text-align: center;
     border-radius: 6px;
@@ -295,6 +301,9 @@ section .title::after{
     margin-bottom: 20px;
     cursor: pointer;
     transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-shadow: 1px 1px 4px #000000;
 }
 .services .serv-content .card:hover{
@@ -448,6 +457,9 @@ section .title::after{
     margin: -8px 0 10px 0;
     color: #09c6f9;
 }
+.teams .carousel .card:hover .text-title{
+    color: #fff;
+}
 .teams .carousel .card img{
     height: 150px;
     width: 150px;
@@ -469,7 +481,7 @@ section .title::after{
     margin: 0 5px;
     outline: none!important;
     border-radius: 50%;
-    border: 2px solid crimson!important;
+    border: 2px solid  #09c6f9!important;
     transition: all 0.3s ease;
 }
 .owl-dot.active{
@@ -478,7 +490,71 @@ section .title::after{
 }
 .owl-dot.active,
 .owl-dot:hover{
-    background: crimson!important;
+    background:  #09c6f9!important;
+}
+
+/* portfolio section styling */
+.portfolio{
+    color:#fff;
+    background: #111;
+}
+.portfolio .title::before{
+    background: #fff;
+}
+.portfolio .title::after{
+    background: #111;
+    content: "Long Text Test";
+}
+.portfolio .portfolio-content .portfolio-box{
+    width: calc(33% - 10px);
+    height: 200px;
+    background: #222;
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px 25px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-shadow: 1px 1px 4px #000000;
+	box-shadow: 2px 2px 13px rgba(0,0,0,0.3);
+}
+.portfolio .portfolio-content .portfolio-box img{
+    width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.portfolio .portfolio-content .portfolio-box .overlay-text{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: rgba(23,209,172,0.80);
+	display:none;
+}
+.portfolio .portfolio-content .portfolio-box .overlay-text h1,p{
+	color: #FFFFFF;
+}
+.portfolio .portfolio-content .portfolio-box .overlay-text h1{
+	font-size: 2.2rem;
+	margin: 0px;
+	padding: 0px;
+	letter-spacing: 2px;	
+}
+.portfolio .portfolio-content .portfolio-box .overlay-text p{
+	font-size: 1.2rem;
+	margin: 0px;
+}
+.portfolio .portfolio-content .portfolio-box:hover{
+    background-color: #045de9;
+    background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
 }
 
 /* contact section styling */
@@ -551,17 +627,19 @@ section .title::after{
 .contact .right form .textarea textarea{
     height: 100%;
     width: 100%;
-    border: 1px solid lightgrey;
+    border: 1px solid #333;
+    background: #222;
     border-radius: 6px;
     outline: none;
     padding: 0 15px;
     font-size: 17px;
     font-family: 'Poppins', sans-serif;
     transition: all 0.3s ease;
+    color: #ddd;
 }
 .contact .right form .field input:focus,
 .contact .right form .textarea textarea:focus{
-    border-color: #b3b3b3;
+    border-color: #444;
 }
 .contact .right form .textarea textarea{
     padding-top: 10px;
@@ -678,7 +756,8 @@ footer span a:hover{
     .about .about-content .right{
         flex: 100%;
     }
-    .services .serv-content .card{
+    .services .serv-content .card,
+    .portfolio .portfolio-content .portfolio-box{
         width: calc(50% - 10px);
         margin-bottom: 20px;
     }
@@ -703,6 +782,9 @@ footer span a:hover{
         font-size: 20px;
     }
     .services .serv-content .card{
+        width: 100%;
+    }
+    .portfolio .portfolio-content .portfolio-box{
         width: 100%;
     }
 }
