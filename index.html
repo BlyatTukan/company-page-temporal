@@ -41,10 +41,10 @@
     <section class="home" id="home">
         <div class="max-width">
             <div class="home-content">
-                <div class="text-1">Hello, my name is</div>
+                <div class="text-1">Welcome</div>
                 <div class="text-2">TINY SLIME STUDIO</div>
                 <div class="text-3"><span class="typing"></span></div>
-                <a href="#">Download Launcher</a>
+                <a href="#">DOWNLOAD LANCHER</a>
             </div>
         </div>
     </section>
@@ -213,15 +213,15 @@
     </section>
 
     <!-- portfolio section start -->
-	<section class="portfolio" id="portfolio">
+	<!--<section class="portfolio" id="portfolio">
         <div class="max-width">
             <h2 class="title">Portfolio</h2>    
             <div class="portfolio-content">
                 <div class="portfolio-box">
-                    <a href="not-found-page.index"><img src="images/profile-1.jpeg"></img></a>     
+                    <a href="pagow.html"><img src="images/profile-1.jpeg"></img></a>     
                 </div>
                 <div class="portfolio-box">
-                    <a href="not-found-page.index"><img src="images/profile-2.jpeg"></img></a>           
+                    <a href="project_platform.html"><img src="images/profile-2.jpeg"></img></a>           
                 </div>
                 <div class="portfolio-box">
                     <a href="not-found-page.index"><img src="images/profile-3.jpeg"></img></a>            
@@ -236,6 +236,39 @@
                     <a href="not-found-page.index"><img src="images/banner.jpg"></img></a>             
                 </div>
             </div>
+        </div>
+    </section>-->
+    <section class="portfolio" id="portfolio">
+        <div class="max-width">
+            <h2 class="title">Portfolio</h2>
+            <div class="wrapper">
+                <nav>
+                    <div class="items">
+                        <span class="item active" data-name="all">All</span>
+                        <span class="item" data-name="pc">PC Game</span>
+                        <span class="item" data-name="mobile">Mobile Game</span>
+                        <span class="item" data-name="cross">Cross Game</span>
+                        <span class="item" data-name="other">Other</span>
+                    </div>
+                </nav>
+                <!-- filter Images -->
+                <div class="gallery">
+
+                <div class="image" data-name="pc"><a href="pagow.html"><img src="images/Portfolio/portfolio_pagow.jpg" alt=""></a></div>
+                <div class="image" data-name="cross"><a href="project_platform.html"><img src="images/Portfolio/portfolio_platform.png" alt=""></a></div>
+                <div class="image" data-name="cross"><a><img src="images/Portfolio/portfolio_hellish_battle.png" alt=""></a></div>
+                
+                </div>
+            </div>
+            <!-- fullscreen img preview box -->
+            <div class="preview-box">
+                <div class="details">
+                <span class="title">Image Category: <p></p></span>
+                <span class="icon fas fa-times"></span>
+                </div>
+                <div class="image-box"><img src="" alt=""></div>
+            </div>
+        <div class="shadow"></div>
         </div>
     </section>
     <!-- Social section start -->
@@ -349,7 +382,8 @@
         <span>Created By <a href="https://www.codingnepalweb.com">Tiny Slime Studio</a> | <span class="far fa-copyright"></span> 2021 All rights reserved.</span>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="scripts/typed_text.js"></script>
+    <script src="scripts/portfolio.js"></script>
     <script>
         const buttons = document.querySelectorAll("a");
         buttons.forEach((button) => {

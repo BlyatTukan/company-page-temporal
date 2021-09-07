@@ -35,14 +35,14 @@ $(document).ready(function(){
 
     // typing text animation script
     var typed = new Typed(".typing", {
-        strings: ["CREATE PROJECT MARS", "CREATE HELLISH BATTLE", "CREATE PROJECT PAGOW", "CREATE REALM RUSH"],
+        strings: ["CREATOR HELLISH BATTLE", "CREATOR PROJECT PAGOW", "CREATOR REALM RUSH"],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
     });
 
     var typed = new Typed(".typing-2", {
-        strings: ["PROJECT MARS", "HELLISH BATTLE", "PROJECT PAGOW", "REALM RUSH"],
+        strings: ["WORD 1", "WORD 2", "WORD 3", "WORD 4", "WORD 5"],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
